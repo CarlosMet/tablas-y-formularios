@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tablas y formularios</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        
+    </style>
 </head>
 <body>
     <h1>
@@ -84,24 +87,18 @@
 
     <table border="1">
         <tr>
-            <td rowspan="3">AÑO</td>
+            <td rowspan="2">AÑO</td>
             <td colspan="4">Expansión de ventas</td>
         </tr>
-    
         <tr>
-            <td rowspan="2">Productos A</td>
-            <td rowspan="2">Productos B</td>
-            <td rowspan="2">Productos C</td>
-            <td rowspan="2">Productos D</td>
+            <td style="height: 40px;" rowspan="">Productos A</td>
+            <td style="height: 40px;" rowspan="">Productos B</td>
+            <td style="height: 40px;" rowspan="">Productos C</td>
+            <td style="height: 40px;" rowspan="">Productos D</td>
         </tr>
-    
-        <tr>
-            <td>N-3</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-    
+
+        
+        
         <tr>
             <td>N-2</td>
             <td>3</td>
@@ -109,28 +106,31 @@
             <td>8</td>
             <td>4</td>
         </tr>
-    
+
         <tr>
             <td>N-1</td>
-            <td>4</td>
-            <td>4</td>
-            <td>7</td>
             <td>3</td>
+            <td>5</td>
+            <td>8</td>
+            <td>4</td>
         </tr>
-    
+
         <tr>
             <td>N</td>
+            <td>3</td>
             <td>5</td>
-            <td>7</td>
-            <td>6</td>
-            <td>2</td>
+            <td>8</td>
+            <td>4</td>
         </tr>
+
     </table>
+    
+    
     
 
     <br><br>
-    <h3>
-        Tabla de presupuesto
+    <h3 style="color: red;">
+        SuperOFERTA viaje a Nueva Zelanda
     </h3>
     <br><br>
 
@@ -182,6 +182,8 @@
     <h3>Formulario datos</h3>
     <br><br>
 
+    <!-- primer formulario -->
+
     <form class="datos" action="">
 
         <div class="form-container">
@@ -205,6 +207,540 @@
         </div>
 
     </form>
+
+    <!-- segundo formulario -->
+     <br><br><br>
+     <h3>Formulario de pagos</h3> <br><br>
+    <form class="pagos-form" action="">
+        <div class="contenedor">
+            <p class="absolute">MIS DATOS</p>
+            <label for="">1.Nombre</label>
+            <input placeholder="escriba aquí su nombre" type="text" name="nombre"><br>
+            <label for="">2.Correo electrónico</label>
+            <input placeholder="ejemplo@dominio.com" type="email" name="email"><br>
+            <label for="">3.Teléfono</label>
+            <input placeholder="ej. +34984530203" type="number" name="telefono"><br>
+        </div> 
+
+        <div class="contenedor">
+
+            <p class="absolute">Dirección</p>
+            <label for="">1.Dirección</label>
+            <textarea name="direccion" id=""></textarea><br>
+            <label for="">2.Código postal</label>
+            <input placeholder="CP" type="number" name="codigo"><br>
+            <label for="">3.Ciudad</label>
+            <input placeholder="ciudad" type="text" name="ciudad"><br>
+
+        </div> 
+
+        <div class="contenedor">
+            <p class="absolute">Forma de pago</p>
+
+            <div style="display: flex;">
+                <p>1.</p>
+                <div style="border: 1px solid gray; width: 300px; position: relative;padding: 18px 28px;">
+                    <p style="position: absolute; top: -9px; background-color: white; padding-inline: 2px;">Tarjetas de crédito</p>
+                    <ul style="list-style: circle;">
+                        <li><input type="radio" name="tarjeta" id="visa" value="Visa"> Visa</li>
+                        <li><input type="radio" name="tarjeta" id="amex" value="American Express"> American Express</li>
+                        <li><input type="radio" name="tarjeta" id="mastercard" value="MasterCard"> MasterCard</li>
+                    </ul>
+                </div>
+            </div>
+            <label for="">2.Número de tarjeta</label>
+            <input type="number" placeholder="Número de tarjeta" name="tarjeta"><br>
+            <label for="">3.Código de seguridad</label>
+            <input type="number" placeholder="Código de seguridad" name="cvc"><br>
+            <label for="">4.CNombre de tarjeta</label>
+            <input type="number" placeholder="Nombre exacto tarjeta" name="cvc"><br>
+
+            
+        </div>
+        <div>
+            <input type="submit" value="Comprar">
+        </div>
+    </form>
+
+    <br><br><br>
+
+    <h2>Tablas y formularios</h2>
+    <br><br>
+
+    <h3>Factura</h3> <br><br>
+
+    <table border="1">
+        <tr>
+            <td style="background-color: yellow; padding-inline: 6px; font-weight: 900; font-size: 23px;" colspan="5" rowspan="5">SUPERMERCADOS <br> "LA VENDEDORA" </td>
+            <td colspan="4"></td>
+            <td style="font-weight: 900;" colspan="1">25/04/2011</td>
+        </tr>
+    
+        <tr>
+            <td style="font-size: 20px; font-weight: 800; text-align: center;" colspan="6">
+                N° Factura <input type="text" value="245" style="border: none; font-size: 20px; font-weight: 800; text-align: center; width: 60px;">
+            </td>
+        </tr>
+    
+        <tr>
+            <td colspan="1" style="font-weight: 800;">Cliente</td>
+            <td colspan="5" rowspan="3">
+                <input type="text" value="Juan Francisco Redrovan" style="border: none; font-weight: 800; width: 100%;"><br>
+                <input type="text" value="1804562738" style="border: none; font-weight: 800; width: 100%;"><br>
+                <input type="text" value="Ambato Av. Ceballos" style="border: none; font-weight: 800; width: 100%;">
+            </td>
+        </tr>
+    
+        <tr>
+            <td style="font-weight: 800;">
+                RUC
+            </td>
+        </tr>
+    
+        <tr>
+            <td style="font-weight: 800;">
+                Dirección
+            </td>
+        </tr>
+    
+        <tr>
+            <td style="text-align: center; padding: 0 18px; font-weight: 800;" colspan="2">CÓDIGO</td>
+            <td style="text-align: center; padding: 0 18px; font-weight: 800;" colspan="2">CANTIDAD</td>
+            <td style="text-align: center; padding: 0 18px; font-weight: 800;" colspan="4">CONCEPTO</td>
+            <td style="text-align: center; padding: 0 18px; font-weight: 800;">PRECIO</td>
+            <td style="text-align: center; padding: 0 18px; font-weight: 800;">IMPORTE</td>
+        </tr>
+    
+        <tr>
+            <td colspan="2">A23 <br> A45 <br><br></td>
+            <td colspan="2">20 <br> 100<br><br></td>
+            <td colspan="4">LAPICES <br> BORRADORES<br><br></td>
+            <td>25 <br> 10<br><br></td>
+            <td>500 <br> 1000<br><br></td>
+        </tr>
+    
+        <tr>
+            <td colspan="7" rowspan="4"></td>
+            <td colspan="2">Importe</td>
+            <td><input type="text" value="1500" style="border: none; font-weight: 800; width: 60px; text-align: right;"></td>
+        </tr>
+    
+        <tr>
+            <td colspan="2">Descuento</td>
+            <td><input type="text" value="75" style="border: none; font-weight: 800; width: 60px; text-align: right;"></td>
+        </tr>
+    
+        <tr>
+            <td colspan="2">Base imponible</td>
+            <td><input type="text" value="1428" style="border: none; font-weight: 800; width: 60px; text-align: right;"></td>
+        </tr>
+    
+        <tr>
+            <td colspan="2">I.V.A</td>
+            <td><input type="text" value="228" style="border: none; font-weight: 800; width: 60px; text-align: right;"></td>
+        </tr>
+    
+        <tr>
+            <td colspan="9" style="font-weight: 900; font-size: 20px; text-align: center; padding: 5px 12px;">TOTAL FACTURA</td>
+            <td>1653</td>
+        </tr>
+    </table>
+
+    <br><br><br>
+
+    <h3>Formulario personal</h3>
+
+    <br><br>
+
+    <form action="">
+        <table style="width: 640px;" border="1">
+    
+            <tr>
+                <td style="font-size: 30px; font-weight: 800; text-align: center; background-color: greenyellow;" colspan="8">Machote de inventario de <br> personal</td>
+            </tr>
+    
+            <tr>
+                <td colspan="8" style="text-align: end; padding-inline: 7px; background-color: blue;">Inventario personal</td>
+            </tr>
+    
+            <tr>
+                <td colspan="1" style="background-color: aquamarine;">Nombre</td>
+                <td style="width: 87.5%;" colspan="7">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="1" style="background-color: aquamarine;">Dirección</td>
+                <td colspan="7" style="width: 87.5%;">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+            </tr>
+    
+            <tr>
+                <td style="background-color: aquamarine;">Teléfono</td>
+                <td colspan="2" style="width: 25%;">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td style="width: 12.5%;"></td>
+                <td colspan="2" style="background-color: aquamarine;">Estado civil</td>
+                <td colspan="2" style="width: 25%;">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="2" style="background-color: aquamarine;">Compañía de seguros</td>
+                <td colspan="4">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td colspan="1">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td colspan="1">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="8" style="width: 100%; height: 16px; background-color: bisque;"></td>
+            </tr>
+    
+            <tr>
+                <td style="background-color: aquamarine;" colspan="3">Estado general de salud</td>
+                <td colspan="5"></td>
+            </tr>
+    
+            <tr>
+                <td colspan="2">Hepatitis</td>
+                <td style="width: 12.5%;">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td colspan="2">Gastritis</td>
+                <td style="width: 12.5%;">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>Asma</td>
+                <td style="width: 12.5%;">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="2">Anemias</td>
+                <td style="width: 12.5%;">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td colspan="2">Diabetes</td>
+                <td style="width: 12.5%;">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>Alergias</td>
+                <td style="width: 12.5%;">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="2">Hipertensión</td>
+                <td style="width: 12.5%;">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td colspan="2">Hipoarterial</td>
+                <td style="width: 12.5%;">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>Otro:</td>
+                <td style="width: 12.5%;">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="2">Hipertensión</td>
+                <td style="width: 12.5%;">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td colspan="2">Hipoarterial</td>
+                <td style="width: 12.5%;">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td></td>
+                <td style="width: 12.5%;">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="8" style="width: 100%; height: 16px; background-color: bisque;"></td>
+            </tr>
+    
+            <tr>
+                <td style="background-color: aquamarine;" colspan="2">Experiencia laboral</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td colspan="2">Empresa</td>
+                <td colspan="6">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="2">Nombre del puesto</td>
+                <td colspan="6">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="2">Funciones del puesto</td>
+                <td colspan="6">
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+            </tr>
+    
+            <tr>
+                <td style="height: 16px;"></td>
+                <td style="height: 16px;"></td>
+                <td style="height: 16px;"></td>
+                <td style="height: 16px;"></td>
+                <td style="height: 16px;"></td>
+                <td style="height: 16px;"></td>
+                <td style="height: 16px;"></td>
+                <td style="height: 16px;"></td>
+            </tr>
+    
+            <tr>
+                <td colspan="8" style="width: 100%; height: 16px; background-color: bisque;"></td>
+            </tr>
+    
+            <tr>
+                <td style="background-color: aquamarine;" colspan="2">Experiencia académica</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td style="text-align: center;" colspan="2">Escolaridad</td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+            </tr>
+    
+            <tr>
+                <td style="text-align: center;" colspan="2">Escuela</td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+            </tr>
+    
+            <tr>
+                <td style="text-align: center;" colspan="2">Profesión</td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+            </tr>
+    
+            <tr>
+                <td style="height: 16px;"></td>
+                <td style="height: 16px;"></td>
+                <td style="height: 16px;"></td>
+                <td style="height: 16px;"></td>
+                <td style="height: 16px;"></td>
+                <td style="height: 16px;"></td>
+                <td style="height: 16px;"></td>
+                <td style="height: 16px;"></td>
+            </tr>
+    
+            <tr>
+                <td style="background-color: aquamarine;" colspan="2">Estudios adicionales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td colspan="2" style="text-align: center;">Entidad o escuela</td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="2" style="text-align: center;">Título</td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+            </tr>
+    
+            <tr>
+                <td style="height: 16px; background-color: bisque;" colspan="8"></td>
+            </tr>
+    
+            <tr>
+                <td style="background-color: aquamarine;" colspan="2">Información adicional</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td colspan="2">Puesto</td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td colspan="2">No empleado</td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td colspan="2">Años en el puesto</td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td colspan="2">Puestos anteriores</td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td colspan="2">Comentarios</td>
+                <td>
+                    <input type="text" style="border: none; width: 100%; background: none; font-size: inherit; padding: 0;">
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+    
+        </table>
+    </form>
+    
+
+    <br><br><br><br><br><br><br><br>
 
 </body>
 </html>
